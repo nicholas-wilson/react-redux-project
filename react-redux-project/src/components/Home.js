@@ -6,8 +6,8 @@ class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <h1>Game Title Here</h1>
-        <Link to="/play"><h3>CLICK HERE TO PLAY!</h3></Link>
+        <h1>Super Volleyball Spike</h1>
+        <Link to="/play"><div><h3>CLICK HERE TO PLAY!</h3></div></Link>
       </div>
     )
   }
