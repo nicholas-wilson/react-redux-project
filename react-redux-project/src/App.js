@@ -9,11 +9,19 @@ function App() {
   return (
     <Router>
       <NavBar/>
-      {/* <Switch> */}
-        <Route path="/" /> {/* add exact after path */}
-        <Route path="/play" component={Play}/>
-        <Route path="/hiscores" component={Hiscores}/>
-      {/* </Switch> */}
+      <Switch>
+        <Route exact path="/">
+          <div>Home page component here</div>
+        </Route>
+
+        <Route path="/play">
+          <Play/>
+        </Route>
+
+        <Route path="/hiscores">
+          <Hiscores />
+        </Route>
+      </Switch>
     </Router>
   );
 }
