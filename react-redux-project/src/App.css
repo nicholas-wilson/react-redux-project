@@ -2,42 +2,24 @@
   text-align: center;
 }
 
-.naenaezuko {
-  height: 50%;
-  width: 50%;
+.NavBar ul{
+  background-color: rgb(59, 5, 46);
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NavBar li {
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 18px;
+  color: rgb(231, 250, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(40px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavBar li:hover {
+  color: black;
+  background-color: lightseagreen;
 }

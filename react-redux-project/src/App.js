@@ -11,7 +11,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/">
-          <div>Home page component here</div>
+          <div className="App">Home page component here</div>
         </Route>
 
         <Route path="/play">
