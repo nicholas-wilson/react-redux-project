@@ -45,3 +45,12 @@ a {
   width: 20%;
   height: 20;
 }
+
+.VolleyballNet {
+  position: absolute;
+  display: block;
+  margin: auto;
+  
+  left: 25%;
+  bottom: 0%;
+}
