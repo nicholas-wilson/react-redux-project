@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Play from './components/Play';
 import Hiscores from './components/Hiscores';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/">
-          <div className="App">Home page component here</div>
+          <Home/>
         </Route>
 
         <Route path="/play">
