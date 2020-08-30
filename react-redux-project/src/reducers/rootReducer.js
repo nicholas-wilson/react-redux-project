@@ -11,7 +11,7 @@ function timeReducer(state = 0, action) {
   switch(action.type){
     case "INCREMENT":
       state++;
-      break;
+      return state;
     default:
       return state;
   }

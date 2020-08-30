@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import VolleyBallNet from './VolleyballNet';
+import Timer from './Timer';
 
 class Play extends Component {
 
@@ -9,7 +10,7 @@ class Play extends Component {
       <div className="Play">
         <h1>This is the Play Component page!!</h1>
         {/* I need a volleyball that will be moved around */}
-        {/* Timer component that counts up */}
+        <Timer/>
         <VolleyBallNet/>
       </div>
     )
