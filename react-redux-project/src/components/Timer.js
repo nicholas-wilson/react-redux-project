@@ -16,7 +16,8 @@ class Timer extends Component {
   render() {
     return (
       <div className="Timer">
-        Redux: {this.props.time}
+        Time<br/>
+        {this.props.time}
       </div>
     )
   }
@@ -30,7 +31,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    tick: () => dispatch({type: 'INCREMENT'})
+    tick: () => dispatch({type: 'INCREMENT_TIME'})
   }
 }
 
