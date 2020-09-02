@@ -5,4 +5,8 @@ class Volleyball < ApplicationRecord
     self.left = rand(700) + 400
     self.top = TOP_SIZES[rand(2)]
   end
+
+  def self.random_balls(amount)
+    Volleyball.all.shuffle.slice(0, amount)
+  end
 end
