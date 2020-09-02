@@ -16,7 +16,7 @@ class Play extends Component {
           <Timer/>
           <Score score={this.props.score}/>
         </div>
-        <Volleyball size="75" left="700" top="300" increaseScore={this.props.increaseScore}/>
+        <Volleyball size={30} left={600} top={200} increaseScore={this.props.increaseScore}/>
         <VolleyBallNet/>
       </div>
     )
