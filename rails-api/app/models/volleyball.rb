@@ -3,6 +3,6 @@ class Volleyball < ApplicationRecord
 
   def random_size
     self.left = rand(700) + 400
-    self.top = TOP_SIZES[rand(1)]
+    self.top = TOP_SIZES[rand(2)]
   end
 end
