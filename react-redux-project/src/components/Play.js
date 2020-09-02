@@ -3,7 +3,6 @@ import VolleyBallNet from './VolleyballNet';
 import Timer from './Timer';
 import Score from './Score';
 import Volleyball from './Volleyball';
-import {incrementScore} from '../actions';
 import { connect } from "react-redux";
 
 class Play extends Component {
@@ -15,10 +14,9 @@ class Play extends Component {
       <div className="Play">
         <div className="ScoreTimeContainer">
           <Timer/>
-          <Score score="0"/>
+          <Score score={this.props.score}/>
         </div>
-        <Volleyball size="30" increaseScore={this.props.increaseScore}/>
-        {/*props for volleyball xPos={} yPos={} size={} */}
+        <Volleyball size="75" left="700" top="300" increaseScore={this.props.increaseScore}/>
         <VolleyBallNet/>
       </div>
     )
@@ -27,8 +25,14 @@ class Play extends Component {
 
 const mapDispatchToProps = (dispatch)=> {
   return {
-    increaseScore: () => dispatch(incrementScore)
+    increaseScore: () => dispatch({type: 'INCREMENT_SCORE'})
   }
 }
 
-export default connect(null, mapDispatchToProps)(Play)
+const mapStateToProps = (state) => {
+  return {
+    score: state.score
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Play)
