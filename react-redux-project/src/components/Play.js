@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import VolleyBallNet from './VolleyballNet';
 import Timer from './Timer';
 import Score from './Score';
-import Volleyball from './Volleyball';
+import Volleyballs from './Volleyballs';
 import { connect } from "react-redux";
 
 class Play extends Component {
@@ -16,8 +16,8 @@ class Play extends Component {
           <Timer/>
           <Score score={this.props.score}/>
         </div>
-        <Volleyball size={30} left={600} top={200} increaseScore={this.props.increaseScore}/>
-        <VolleyBallNet/>
+        <Volleyballs increaseScore={this.props.increaseScore}/>
+        <VolleyBallNet />
       </div>
     )
   }
