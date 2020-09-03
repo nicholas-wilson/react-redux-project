@@ -15,7 +15,17 @@ class Volleyball extends Component {
     if (this.state.size > 80) {
       clearInterval(this.interval);
     } else {
-      this.setState(prevState => ({top: prevState.top + 10, left: prevState.left + 5, size: prevState.size + 5}))
+      this.setState(prevState => (this.getAnimationObject(prevState)))
+    }
+  }
+
+  getAnimationObject = (prevState) => {
+    if (this.props.top === 200 && this.props.left <= 700) { // balls moving right and down
+      return {top: prevState.top + 10, left: prevState.left + 5, size: prevState.size + 5}
+    } else if (this.props.top === 200) {  // balls moving right and down
+      return {top: prevState.top + 10, left: prevState.left - 5, size: prevState.size + 5}
+    } else { // balls moving up
+      return {top: prevState.top -10, left: prevState.left + 5, size: prevState.size + 5}
     }
   }
 
