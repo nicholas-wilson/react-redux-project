@@ -9,3 +9,12 @@ export const incrementScore = ()=> {
     type: "INCREMENT_SCORE"
   }
 }
+
+export const fetchHiscores = () => {
+  return (dispatch) => {
+    dispatch({type: "LOADING_HISCORES"})
+    fetch("http://localhost:3000/hiscores")
+    .then(response => response.json())
+    .then(hiscoresJson => dispatch({type: "ADD_HISCORES", hiscores: hiscoresJson}))
+  }
+}

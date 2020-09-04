@@ -3,6 +3,7 @@ import {combineReducers} from "redux";
 const rootReducer = combineReducers({
   time: timeReducer,
   score: scoreReducer,
+  hiscores: hiscoresReducer,
 })
 
 export default rootReducer;
@@ -26,5 +27,14 @@ function scoreReducer(state = 0, action) {
       return state;
     default:
         return state;
+  }
+}
+
+function hiscoresReducer(state = [], action) {
+  switch(action.type) {
+    case "ADD_HISCORES":
+      return [...state, ...action.hiscores];
+    default:
+      return state;
   }
 }
