@@ -24,7 +24,7 @@ class Volleyballs extends Component {
   }
 
   startLaunching = () => {
-    this.launchInterval = setInterval(this.activateVolleyball, 1000)
+    this.launchInterval = setInterval(this.activateVolleyball, 1500)
   }
 
   activateVolleyball = () => {
