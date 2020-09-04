@@ -7,12 +7,13 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 
-function timeReducer(state = 0, action) {
+function timeReducer(state = {seconds: 0, timer: null}, action) {
 
   switch(action.type){
     case "INCREMENT_TIME":
-      state++;
-      return state;
+      return {...state, seconds: state.seconds + 1};
+    case "SET_TIMER":
+      return {...state, timer: action.timer};
     default:
       return state;
   }

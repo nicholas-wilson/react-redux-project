@@ -7,6 +7,7 @@ class Timer extends Component {
 
   componentDidMount() {
     this.timer = setInterval(() => this.props.tick(), 1000)
+    this.props.setTimer(this.timer)
   }
 
   componentWillUnmount() {
@@ -25,13 +26,14 @@ class Timer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    time: state.time
+    time: state.time.seconds
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    tick: () => dispatch({type: 'INCREMENT_TIME'})
+    tick: () => dispatch({type: 'INCREMENT_TIME'}),
+    setTimer: (timer) => dispatch({type: 'SET_TIMER', timer: timer})
   }
 }
 

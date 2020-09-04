@@ -16,7 +16,7 @@ class Play extends Component {
           <Timer/>
           <Score score={this.props.score}/>
         </div>
-        <Volleyballs increaseScore={this.props.increaseScore}/>
+        <Volleyballs timer={this.props.timer} increaseScore={this.props.increaseScore}/>
         <VolleyBallNet />
       </div>
     )
@@ -31,7 +31,8 @@ const mapDispatchToProps = (dispatch)=> {
 
 const mapStateToProps = (state) => {
   return {
-    score: state.score
+    score: state.score,
+    timer: state.time.timer
   }
 }
 

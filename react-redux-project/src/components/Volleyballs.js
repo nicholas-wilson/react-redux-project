@@ -45,6 +45,7 @@ class Volleyballs extends Component {
     this.currentBall++;
     if (this.currentBall === 20) {
       clearInterval(this.launchInterval)
+      clearInterval(this.props.timer)
     }
   }
 
