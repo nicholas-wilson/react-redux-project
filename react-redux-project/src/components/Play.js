@@ -13,6 +13,10 @@ class Play extends Component {
     setTimeout(this.props.showHiscoreInput, 35 * 1000)
   }
 
+  componentWillUnmount() {
+    this.props.resetScore();
+  }
+
   render() {
 
     return (
@@ -34,6 +38,7 @@ class Play extends Component {
 const mapDispatchToProps = (dispatch)=> {
   return {
     increaseScore: () => dispatch({type: 'INCREMENT_SCORE'}),
+    resetScore: () => dispatch({type: "RESET_SCORE"}),
     showHiscoreInput: () => dispatch({type: 'SHOW_HISCORE_INPUT'})
   }
 }

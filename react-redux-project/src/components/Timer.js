@@ -12,6 +12,7 @@ class Timer extends Component {
 
   componentWillUnmount() {
     clearInterval(this.timer);
+    this.props.resetTime();
   }
 
   render() {
@@ -33,6 +34,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     tick: () => dispatch({type: 'INCREMENT_TIME'}),
+    resetTime: () => dispatch({type: 'RESET_TIME'}),
     setTimer: (timer) => dispatch({type: 'SET_TIMER', timer: timer})
   }
 }

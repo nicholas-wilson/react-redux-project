@@ -14,6 +14,8 @@ function timeReducer(state = {seconds: 0, timer: null}, action) {
   switch(action.type){
     case "INCREMENT_TIME":
       return {...state, seconds: state.seconds + 1};
+    case "RESET_TIME":
+      return {...state, seconds: 0};
     case "SET_TIMER":
       return {...state, timer: action.timer};
     default:
@@ -24,8 +26,9 @@ function timeReducer(state = {seconds: 0, timer: null}, action) {
 function scoreReducer(state = 0, action) {
   switch(action.type) {
     case "INCREMENT_SCORE":
-      state++;
-      return state;
+      return state + 1;
+    case "RESET_SCORE":
+      return 0;
     default:
         return state;
   }
