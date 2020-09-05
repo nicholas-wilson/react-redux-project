@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_02_195022) do
+ActiveRecord::Schema.define(version: 2020_09_05_200833) do
+
+  create_table "hiscores", force: :cascade do |t|
+    t.string "name"
+    t.integer "score"
+    t.integer "time"
+  end
 
   create_table "volleyballs", force: :cascade do |t|
     t.integer "top"
