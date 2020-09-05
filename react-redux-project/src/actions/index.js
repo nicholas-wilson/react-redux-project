@@ -18,3 +18,18 @@ export const fetchHiscores = () => {
     .then(hiscoresJson => dispatch({type: "ADD_HISCORES", hiscores: hiscoresJson}))
   }
 }
+
+export const submitScore = (score) => {
+  fetch("http://localhost:3000/hiscores", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      name: score.name,
+      score: score.points,
+      time: score.time
+    })
+  })
+}
