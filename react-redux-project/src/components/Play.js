@@ -29,7 +29,7 @@ class Play extends Component {
         <Volleyballs timer={this.props.timer} increaseScore={this.props.increaseScore}/>
         <VolleyBallNet />
         <div className={this.props.inputVisible}>
-          <HiscoreInput score={this.props.score} submitScore={submitScore}/>
+          <HiscoreInput time={this.props.time} score={this.props.score} submitScore={submitScore}/>
         </div>
       </div>
     )
@@ -49,6 +49,7 @@ const mapStateToProps = (state) => {
   return {
     score: state.score,
     timer: state.time.timer,
+    time: state.time.seconds,
     inputVisible: state.hiscoreInput
   }
 }
