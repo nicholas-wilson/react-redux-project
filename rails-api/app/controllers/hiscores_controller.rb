@@ -1,11 +1,11 @@
 class HiscoresController < ApplicationController
 
   def index
-    scores = Hiscores.all
+    scores = Hiscore.all
     render json: scores
   end
 
   def create
-    # take the data from the fetch and add a new entry to our hiscores table
+    Hiscore.create(name: params["hiscore"]["name"], score: params["hiscore"]["score"], time: params["hiscore"]["time"])
   end
 end
