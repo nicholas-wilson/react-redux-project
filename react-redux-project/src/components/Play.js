@@ -15,6 +15,7 @@ class Play extends Component {
 
   componentWillUnmount() {
     this.props.resetScore();
+    this.props.hideHiscoreInput();
   }
 
   render() {
@@ -39,7 +40,8 @@ const mapDispatchToProps = (dispatch)=> {
   return {
     increaseScore: () => dispatch({type: 'INCREMENT_SCORE'}),
     resetScore: () => dispatch({type: "RESET_SCORE"}),
-    showHiscoreInput: () => dispatch({type: 'SHOW_HISCORE_INPUT'})
+    showHiscoreInput: () => dispatch({type: 'SHOW_HISCORE_INPUT'}),
+    hideHiscoreInput: () => dispatch({type: 'HIDE_HISCORE_INPUT'})
   }
 }
 

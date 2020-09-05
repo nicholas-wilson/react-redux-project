@@ -47,6 +47,8 @@ function hiscoreInputReducer(state = "hidden", action) {
   switch(action.type) {
     case "SHOW_HISCORE_INPUT":
       return "";
+    case "HIDE_HISCORE_INPUT":
+      return "hidden";
     default:
       return state;
   }
