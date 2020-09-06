@@ -5,7 +5,7 @@ class HiscoreInput extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.submitScore({
-      name: event.target.childNodes[1].text,
+      name: event.target.childNodes[1].value,
       points: this.props.score,
       time: this.props.time
     })
