@@ -1,7 +1,7 @@
 class HiscoresController < ApplicationController
 
   def index
-    scores = Hiscore.all
+    scores = Hiscore.all.sort_by_score
     render json: scores
   end
 
